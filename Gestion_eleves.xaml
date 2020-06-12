@@ -1,0 +1,32 @@
+﻿<Page
+    x:Class="Colloscope.Gestion_eleves"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Colloscope"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <StackPanel x:Name="panel_eleve1" HorizontalAlignment="Left" Height="760" Margin="99,136,0,0" VerticalAlignment="Top" Width="379" RenderTransformOrigin="0.012,0.03" Visibility="Collapsed"/>
+        <StackPanel x:Name="panel_eleve2" HorizontalAlignment="Left" Height="760" Margin="483,136,0,0" VerticalAlignment="Top" Width="379" RenderTransformOrigin="0.012,0.03" Visibility="Collapsed"/>
+        <Button x:Name="charger" Content="Aucun fichier élève trouvé. Cliquez pour en créer un." Height="65" Margin="99,42,0,0" VerticalAlignment="Top" Width="758" Click="charger_Click"/>
+        <StackPanel x:Name="panel_creation" HorizontalAlignment="Left" Height="853" Margin="900,42,0,0" VerticalAlignment="Top" Width="396" RenderTransformOrigin="0.058,0.056" Visibility="Collapsed" BorderThickness="2" BorderBrush="Black">
+            <TextBlock Text="Ajouter un élève." HorizontalAlignment="Left" Width="300" Height="30" Margin="20 10 10 10" />
+            <TextBox x:Name="Box_Nom" PlaceholderText="Entrez le nom de l'élève." HorizontalAlignment="Left" Width="300" Height="33" Margin="40 0 0 0" />
+            <TextBox x:Name="Box_Prenom" PlaceholderText="Entrez le Prénom de l'élève." HorizontalAlignment="Left" Width="300" Height="33" Margin="40 0 0 0" />
+            <ListView x:Name="Bouton_cinqde" HorizontalAlignment="Left" Width="300" Height="43" Margin="40 0 0 0" SelectionMode="Multiple">
+                <x:String>"5/2"</x:String>
+            </ListView>
+            <ListView x:Name="Box_Options" Width="300" Height="200" HorizontalAlignment="Left" Margin="40 0 0 0" Header="Sélectionnez les options de l'élève." SelectionMode="Multiple">
+                <x:String>Anglais</x:String>
+                <x:String>Allemand</x:String>
+                <x:String>OCamL</x:String>
+                <x:String>SI</x:String>
+            </ListView>
+            <ListView x:Name="Box_Indisponibilites" SelectionMode="Multiple" Header="Sélectionnez toutes les heures où l'élève a cours." Width="300" Height="300" CanBeScrollAnchor="True"/>
+            <Button x:Name="btn_Confirmer" FontFamily="Segoe MDL2 Assets" Content="&#xE70F;" Width="50" Height="50" Margin="270 50 0 0" Click="btn_Confirmer_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

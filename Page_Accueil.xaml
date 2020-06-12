@@ -1,0 +1,19 @@
+﻿<Page
+    x:Class="Colloscope.Page_Accueil"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Colloscope"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Button x:Name="btnColleurs" x:FieldModifier="public" Content="Aucun fichier colleur trouvé." Height="42" Margin="34,30,0,0" VerticalAlignment="Top" Width="288" Click="btnColleurs_Click"/>
+        <Button x:Name="btnEleves" Content="Aucun fichier élève trouvé." Height="42" Margin="434,30,0,0" VerticalAlignment="Top" Width="532" Click="btnEleves_Click"/>
+        <Rectangle HorizontalAlignment="Left" Height="980" Margin="366,0,0,0" Stroke="Black" VerticalAlignment="Center" Width="26" Fill="AliceBlue"/>
+        <StackPanel x:Name="stack" Margin="34,81,1178,81" RenderTransformOrigin="0.035,0.02"/>
+        <StackPanel x:Name="stack_eleves1" Margin="434,91,811,71" RenderTransformOrigin="0.035,0.02"/>
+        <StackPanel x:Name="stack_eleves2" Margin="700,91,534,71" RenderTransformOrigin="0.035,0.02"/>
+    </Grid>
+</Page>

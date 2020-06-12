@@ -1,0 +1,46 @@
+﻿<Page
+    x:Class="Colloscope.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Colloscope"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" d:DesignWidth="2388">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="10*"/>
+        </Grid.ColumnDefinitions>
+        <SplitView Grid.Column="0" x:Name="MySplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="150" Margin="0 10 0 0">
+            <SplitView.Pane>
+                <StackPanel Background="Gray">
+                    <Button x:Name="btnShowPane" FontFamily="Segoe MDL2 Assets" Content="&#xE00F;" Width="50" Height="50" Background="Transparent" Click="btnShowPane_Click"/>
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="Colleur_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE7EE;" Width="50" Height="50" Background="Transparent" Click="Colleur_Menu_Click"/>
+                        <TextBlock Text="Colleurs" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="Eleve_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE77B;" Width="50" Height="50" Background="Transparent" Click="Eleve_Menu_Click"/>
+                        <TextBlock Text="Eleves" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="Accueil_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE913;" Width="50" Height="50" Background="Transparent" Click="Accueil_Menu_Click"/>
+                        <TextBlock Text="Accueil" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="Aide_Menu" FontFamily="Segoe MDL2 Assets" Content="&#xE9CE;" Width="50" Height="50" Background="Transparent" Click="Aide_Menu_Click"/>
+                        <TextBlock Text="Aide" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <StackPanel Orientation="Horizontal" >
+                        <Button x:Name="Generer" FontFamily="Segoe MDL2 Assets" Content="&#xE768;" Width="50" Height="50" Background="Transparent" Click="Generer_Click"/>
+                        <TextBlock Text="Génerer" FontSize="18" VerticalAlignment="Center"/>
+                    </StackPanel>
+                </StackPanel>
+            </SplitView.Pane>
+        </SplitView>
+        <Frame Grid.Column="1" x:Name="frame" x:FieldModifier="public" HorizontalAlignment="Left" VerticalAlignment="Center" Width="2019" Height="869" Margin="10,0,0,0"/>
+    </Grid>
+
+</Page>
